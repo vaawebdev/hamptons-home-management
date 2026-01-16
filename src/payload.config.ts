@@ -8,7 +8,7 @@ import { buildConfig } from 'payload'
 import { payloadTotp } from 'payload-totp'
 import sharp from 'sharp'
 import { fileURLToPath } from 'url'
-import { Media } from './collections/-Media'
+import { Media } from './data/collections/media'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
