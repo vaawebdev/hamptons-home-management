@@ -1,14 +1,13 @@
-import React from 'react'
-import './styles.css'
+import { FC, PropsWithChildren } from 'react'
 
 export const metadata = {
-  description: 'A blank template using Payload in a Next.js app.',
   title: 'Payload Blank Template',
+  description: 'A blank template using Payload in a Next.js app.',
 }
 
-export default async function RootLayout(props: { children: React.ReactNode }) {
-  const { children } = props
+type LayoutProps = PropsWithChildren
 
+const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <html lang="en">
       <body>
@@ -17,3 +16,5 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
     </html>
   )
 }
+
+export default Layout

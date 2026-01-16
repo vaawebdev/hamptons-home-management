@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-serif: var(--font-copperplate), system-ui, sans-serif;
+  --font-sans: var(--font-eb-garamond), system-ui, sans-serif;
+  --z-index-max: 9999999999;
+  --z-index-dialog: 99999999999;
+  --color-ink-50: #eaf4ff;
+  --color-ink-100: #d8eaff;
+  --color-ink-200: #b9d5ff;
+  --color-ink-300: #8eb9ff;
+  --color-ink-400: #628fff;
+  --color-ink-500: #3e65ff;
+  --color-ink-600: #1d38ff;
+  --color-ink-700: #1229f0;
+  --color-ink-800: #1226c1;
+  --color-ink-900: #192b96;
+  --color-ink-950: #131e72;
+}
