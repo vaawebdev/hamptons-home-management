@@ -48,7 +48,7 @@ export const FooterContacts: FC = async () => {
   }
 
   return contacts.length ? (
-    <ul className="flex flex-col gap-x-9 gap-y-6 text-gray-300 lg:flex-row lg:items-start lg:justify-center">
+    <ul className="flex flex-col gap-x-9 gap-y-6 text-gray-300 lg:flex-row lg:items-start lg:justify-end">
       {contacts.map((contact) => (
         <li key={contact.id} className="flex items-start gap-4">
           <contact.icon className="mt-0.6 size-6 shrink-0" />
