@@ -1,18 +1,9 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
 
 export const HeroSection: FC = () => {
   return (
-    <section className="relative bg-black py-20">
-      <Image
-        src="/images/hero-bg.webp"
-        fill
-        alt="House on the hill"
-        className="absolute inset-0 z-10 size-full object-cover select-none"
-        priority
-        fetchPriority="high"
-      />
+    <section className="relative bg-black bg-[image:url(/images/hero-bg.webp)] bg-cover bg-center py-20">
       <div className="absolute inset-0 z-20 size-full bg-black/50" />
       <div className="relative z-30 container space-y-8 py-12">
         <h1 className="mx-auto max-w-4xl text-center font-mono text-4xl font-semibold text-balance text-white sm:text-5xl md:text-6xl lg:text-7xl">
