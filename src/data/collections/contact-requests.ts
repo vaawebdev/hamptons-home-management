@@ -10,7 +10,7 @@ export const ContactRequests: CollectionConfig = {
     update: authenticated,
   },
   admin: {
-    group: 'General',
+    group: 'Conversions',
     useAsTitle: 'email',
     defaultColumns: ['name', 'email', 'phone', 'address'],
   },

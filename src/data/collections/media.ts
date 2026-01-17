@@ -11,7 +11,7 @@ export const Media: CollectionConfig = {
     update: authenticated,
   },
   admin: {
-    group: 'General',
+    group: 'Content',
   },
   fields: [
     {
