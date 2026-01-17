@@ -40,7 +40,11 @@ type LayoutProps = PropsWithChildren
 
 const Layout: FC<LayoutProps> = ({ children }) => {
   return (
-    <html lang="en" className={cn('min-h-screen scroll-smooth', playfairDisplay.variable)}>
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={cn('min-h-screen', playfairDisplay.variable)}
+    >
       <body className="flex min-h-screen flex-col items-stretch scroll-smooth">
         <Header />
         <main className="flex grow flex-col items-stretch">{children}</main>

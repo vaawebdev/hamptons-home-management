@@ -7,7 +7,6 @@ const nextConfig = {
   },
   experimental: {
     inlineCss: true,
-    globalNotFound: true,
   },
   images: {
     dangerouslyAllowSVG: true,

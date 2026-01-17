@@ -13,7 +13,7 @@ export type LegalSectionProps = {
 
 export const LegalSection: FC<LegalSectionProps> = ({ title, updatedAt, content }) => {
   return (
-    <section className="container space-y-6 py-12 lg:px-8">
+    <section className="container space-y-6 py-12">
       <Link
         href="/"
         className="inline-flex items-center gap-2 text-gray-700 transition-colors hover:text-black"
