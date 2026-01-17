@@ -5,7 +5,7 @@ import { FC } from 'react'
 
 export const metadata: Metadata = {
   title:
-    'Terms Of Service | Hamptons Property Management Services | Anton Nesterov - 20+ Years Experience',
+    'Terms Of Service | Hamptons Property Management Services | Over two decades of local expertise. Trusted service. Complete peace of mind.',
 }
 
 const Page: FC = async () => {

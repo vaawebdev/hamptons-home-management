@@ -37,5 +37,5 @@
       "source.fixAll.eslint": "explicit"
     }
   },
-  "cSpell.words": ["hamptons", "Playfair"]
+  "cSpell.words": ["hamptons", "nesterov", "Playfair"]
 }

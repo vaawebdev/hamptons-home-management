@@ -8,7 +8,8 @@ import { FC, PropsWithChildren } from 'react'
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL!),
-  title: 'Hamptons Property Management Services | Anton Nesterov - 20+ Years Experience',
+  title:
+    'Hamptons Property Management Services | Over two decades of local expertise. Trusted service. Complete peace of mind.',
   description:
     'Premier luxury property management in the Hamptons by Anton Nesterov. 20+ years of local expertise in estate care, maintenance, and concierge services for discerning homeowners.',
   icons: [
@@ -43,7 +44,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={cn('min-h-screen', playfairDisplay.variable)}
+      className={cn('min-h-screen scroll-smooth', playfairDisplay.variable)}
     >
       <body className="flex min-h-screen flex-col items-stretch scroll-smooth">
         <Header />
