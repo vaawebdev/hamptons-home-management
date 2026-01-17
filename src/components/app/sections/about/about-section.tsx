@@ -6,12 +6,10 @@ import { CONTENT_BLOCKS, FOUNDER, INTRO_TEXT } from './constants'
 export const AboutSection: FC = () => {
   return (
     <section id="about" className="py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-16 text-center">
-          <h2 className="mb-4 font-mono text-3xl font-semibold text-balance sm:text-4xl md:text-5xl">
-            About Us
-          </h2>
-        </div>
+      <div className="container space-y-12">
+        <h2 className="text-center font-mono text-3xl font-semibold text-balance sm:text-4xl md:text-5xl">
+          About Us
+        </h2>
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="flex flex-col-reverse gap-y-6 lg:flex-col">
             <Image
@@ -19,7 +17,7 @@ export const AboutSection: FC = () => {
               width={576}
               height={864}
               alt="Anton Nesterov"
-              className="mx-auto hidden max-w-full lg:block"
+              className="mx-auto max-w-full"
             />
             <div className="space-y-1 text-center">
               <h3 className="font-mono text-2xl font-semibold text-balance text-black">

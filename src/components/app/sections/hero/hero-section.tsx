@@ -21,16 +21,16 @@ export const HeroSection: FC = () => {
         <p className="mx-auto max-w-3xl text-center font-mono text-xl tracking-wide text-pretty text-gray-100 italic sm:text-2xl md:text-3xl">
           Over two decades of local expertise. Trusted service. Complete peace of mind.
         </p>
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-center">
           <Link
             href="/#contact-us"
-            className="border-2 border-white bg-white px-8 py-4 text-lg font-medium text-black transition-colors hover:border-gray-200 hover:bg-gray-200"
+            className="border-2 border-white bg-white px-8 py-4 text-center text-lg font-medium text-black transition-colors hover:border-gray-200 hover:bg-gray-200"
           >
             Get In Touch
           </Link>
           <Link
             href="/#services"
-            className="border-2 border-white px-8 py-4 text-lg font-medium text-white transition-colors hover:bg-white hover:text-black"
+            className="border-2 border-white px-8 py-4 text-center text-lg font-medium text-white transition-colors hover:bg-white hover:text-black"
           >
             Our Services
           </Link>
