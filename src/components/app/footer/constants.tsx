@@ -24,12 +24,12 @@ export const FOOTER_NAVIGATION = [
 export const FOOTER_LEGAL = [
   {
     id: 'privacy-policy',
-    href: '#',
+    href: '/privacy-policy',
     text: 'Privacy Policy',
   },
   {
     id: 'terms-of-service',
-    href: '#',
+    href: '/terms-of-service',
     text: 'Terms of Service',
   },
 ]

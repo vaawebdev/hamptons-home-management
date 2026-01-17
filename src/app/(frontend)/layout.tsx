@@ -8,6 +8,9 @@ import { FC, PropsWithChildren } from 'react'
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL!),
+  title: 'Hamptons Property Management Services | Anton Nesterov - 20+ Years Experience',
+  description:
+    'Premier luxury property management in the Hamptons by Anton Nesterov. 20+ years of local expertise in estate care, maintenance, and concierge services for discerning homeowners.',
   icons: [
     { rel: 'icon', url: '/favicon.ico' },
     {

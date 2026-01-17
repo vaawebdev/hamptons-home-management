@@ -9,6 +9,8 @@ import { payloadTotp } from 'payload-totp'
 import sharp from 'sharp'
 import { fileURLToPath } from 'url'
 import { Media } from './data/collections/media'
+import { PrivacyPolicy } from './data/globals/privacy-policy'
+import { TermsOfService } from './data/globals/terms-of-service'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -20,7 +22,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  globals: [],
+  globals: [PrivacyPolicy, TermsOfService],
   collections: [Users, Media],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',

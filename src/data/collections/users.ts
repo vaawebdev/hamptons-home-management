@@ -10,6 +10,7 @@ export const Users: CollectionConfig = {
     update: authenticated,
   },
   admin: {
+    group: 'General',
     defaultColumns: ['name', 'email'],
     useAsTitle: 'name',
   },
