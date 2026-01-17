@@ -10,17 +10,21 @@ export const CONTACT_INFO = [
   {
     icon: MailIcon,
     label: 'Email',
-    content: 'info@hamptonspm.com',
-    href: 'mailto:info@hamptonspm.com',
+    content: 'info@hamptonshomemgmt.com',
+    href: 'mailto:info@hamptonshomemgmt.com',
   },
   {
     icon: MapPinIcon,
     label: 'Location',
     content: (
       <>
-        Serving the Hamptons
+        Hamptons Home Management
         <br />
-        New York
+        33 flying point rd , suite 124
+        <br />
+        Southampton NY
+        <br />
+        11968
       </>
     ),
   },
