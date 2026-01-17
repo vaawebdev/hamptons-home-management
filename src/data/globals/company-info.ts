@@ -1,10 +1,10 @@
 import { type GlobalConfig } from 'payload'
 import { anyone } from '../access/anyone'
 import { authenticated } from '../access/authenticated'
-import { revalidatePrivacyPolicyHook } from '../hooks/revalidate-privacy-policy-hook'
+import { revalidateCompanyInfoHook } from '../hooks/revalidate-company-info-hook'
 
-export const PrivacyPolicy: GlobalConfig = {
-  slug: 'privacy-policy',
+export const CompanyInfo: GlobalConfig = {
+  slug: 'company-info',
   access: {
     read: anyone,
     update: authenticated,
@@ -14,17 +14,21 @@ export const PrivacyPolicy: GlobalConfig = {
   },
   fields: [
     {
-      name: 'content',
-      type: 'richText',
+      name: 'address',
+      type: 'textarea',
       required: true,
     },
     {
-      name: 'updatedAt',
-      type: 'date',
+      name: 'email',
+      type: 'email',
       required: true,
+    },
+    {
+      name: 'phone',
+      type: 'text',
     },
   ],
   hooks: {
-    afterChange: [revalidatePrivacyPolicyHook],
+    afterChange: [revalidateCompanyInfoHook],
   },
 }

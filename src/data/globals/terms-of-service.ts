@@ -10,7 +10,7 @@ export const TermsOfService: GlobalConfig = {
     update: authenticated,
   },
   admin: {
-    group: 'Legal',
+    group: 'Company',
   },
   fields: [
     {

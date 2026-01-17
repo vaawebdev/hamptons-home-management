@@ -10,6 +10,7 @@ import sharp from 'sharp'
 import { fileURLToPath } from 'url'
 import { ContactRequests } from './data/collections/contact-requests'
 import { Media } from './data/collections/media'
+import { CompanyInfo } from './data/globals/company-info'
 import { PrivacyPolicy } from './data/globals/privacy-policy'
 import { TermsOfService } from './data/globals/terms-of-service'
 
@@ -23,7 +24,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  globals: [PrivacyPolicy, TermsOfService],
+  globals: [PrivacyPolicy, TermsOfService, CompanyInfo],
   collections: [Users, Media, ContactRequests],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',

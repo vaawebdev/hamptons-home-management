@@ -92,10 +92,12 @@ export interface Config {
   globals: {
     'privacy-policy': PrivacyPolicy;
     'terms-of-service': TermsOfService;
+    'company-info': CompanyInfo;
   };
   globalsSelect: {
     'privacy-policy': PrivacyPolicySelect<false> | PrivacyPolicySelect<true>;
     'terms-of-service': TermsOfServiceSelect<false> | TermsOfServiceSelect<true>;
+    'company-info': CompanyInfoSelect<false> | CompanyInfoSelect<true>;
   };
   locale: null;
   user: User & {
@@ -410,6 +412,18 @@ export interface TermsOfService {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "company-info".
+ */
+export interface CompanyInfo {
+  id: string;
+  address: string;
+  email: string;
+  phone?: string | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "privacy-policy_select".
  */
 export interface PrivacyPolicySelect<T extends boolean = true> {
@@ -424,6 +438,18 @@ export interface PrivacyPolicySelect<T extends boolean = true> {
  */
 export interface TermsOfServiceSelect<T extends boolean = true> {
   content?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "company-info_select".
+ */
+export interface CompanyInfoSelect<T extends boolean = true> {
+  address?: T;
+  email?: T;
+  phone?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

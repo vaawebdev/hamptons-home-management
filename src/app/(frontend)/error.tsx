@@ -13,9 +13,7 @@ const Error: FC<Props> = ({ error }) => {
     console.error(error)
   }, [error])
 
-  return (
-    <ErrorSection code="500" name="Server Error" title="The gallery lights are temporarily out." />
-  )
+  return <ErrorSection code="500" name="Server Error" title="Website is temporarily out." />
 }
 
 export default Error
