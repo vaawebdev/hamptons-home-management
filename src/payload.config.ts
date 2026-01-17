@@ -8,6 +8,7 @@ import { buildConfig } from 'payload'
 import { payloadTotp } from 'payload-totp'
 import sharp from 'sharp'
 import { fileURLToPath } from 'url'
+import { ContactRequests } from './data/collections/contact-requests'
 import { Media } from './data/collections/media'
 import { PrivacyPolicy } from './data/globals/privacy-policy'
 import { TermsOfService } from './data/globals/terms-of-service'
@@ -23,7 +24,7 @@ export default buildConfig({
     },
   },
   globals: [PrivacyPolicy, TermsOfService],
-  collections: [Users, Media],
+  collections: [Users, Media, ContactRequests],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
