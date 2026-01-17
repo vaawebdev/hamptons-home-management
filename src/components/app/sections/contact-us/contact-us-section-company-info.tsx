@@ -54,17 +54,17 @@ export const ContactUsSectionCompanyInfo: FC = async () => {
           <h3 className="mb-6 font-mono text-2xl font-semibold text-balance">
             Contact Information
           </h3>
-          <div className="space-y-4">
+          <ul className="space-y-4">
             {contacts.map((contact) => (
-              <div key={contact.id} className="flex items-start gap-4">
+              <li key={contact.id} className="flex items-start gap-4">
                 <contact.icon className="mt-1 size-6 shrink-0" />
                 <div className="space-y-1">
                   <h3 className="font-mono font-semibold text-balance">{contact.label}</h3>
                   <div className="text-gray-700">{contact.content}</div>
                 </div>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       ) : null}
       <div className="space-y-2 bg-black p-6 text-white">

@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import { FooterBrand } from './footer-brand'
+import { FooterContacts } from './footer-contacts'
 import { FooterCopyright } from './footer-copyright'
 import { FooterLegal } from './footer-legal'
 import { FooterNavigation } from './footer-navigation'
@@ -13,6 +14,8 @@ export const Footer: FC = () => {
           <FooterNavigation />
           <FooterLegal />
         </div>
+        <hr className="h-px w-full border-0 bg-gray-800" />
+        <FooterContacts />
         <hr className="h-px w-full border-0 bg-gray-800" />
         <FooterCopyright />
       </div>
