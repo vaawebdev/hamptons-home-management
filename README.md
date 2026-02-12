@@ -17,7 +17,7 @@ This repository is a app for Hamptons Home Management Website, powered by [Next.
 
 ## Running
 
-- Copy `.env.example` to `.env.local`
+- Copy `.env.example` to `.env`
 - Run `docker compose up -d`
 - Run `pnpm run dev`
 

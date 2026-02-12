@@ -6,8 +6,18 @@ services:
     command:
       - --storageEngine=wiredTiger
     volumes:
-      - mongo:/hamptons-home-management/data/db
+      - mongo:/data/db
     logging:
       driver: none
+  mailpit:
+    image: axllent/mailpit
+    ports:
+      - 8025:8025
+      - 1025:1025
+    environment:
+      MP_MAX_MESSAGES: 100
+      MP_SMTP_AUTH: default:secret
+      MP_SMTP_AUTH_ALLOW_INSECURE: 1
 volumes:
   mongo:
+    driver: local

@@ -15,12 +15,10 @@ export const ContactUsSectionForm: FC = () => {
       startTransition(async () => {
         const payload = new FormData(form)
 
-        const response = await fetch('/api/submit-contact-request', {
+        await fetch('/api/submit-contact-request', {
           method: 'POST',
           body: payload,
         })
-
-        if (!response.ok) return
 
         setIsSubmitted(true)
         form.reset()

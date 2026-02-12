@@ -1,5 +1,6 @@
 import { Users } from '@/data/collections/users'
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
+import { nodemailerAdapter } from '@payloadcms/email-nodemailer'
 import { payloadCloudPlugin } from '@payloadcms/payload-cloud'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
@@ -34,6 +35,18 @@ export default buildConfig({
   db: mongooseAdapter({
     url: process.env.DATABASE_URI || '',
     migrationDir: './src/data/migrations',
+  }),
+  email: nodemailerAdapter({
+    defaultFromAddress: process.env.MAIL_DEFAULT_FROM_ADDRESS!,
+    defaultFromName: process.env.MAIL_DEFAULT_FROM_NAME!,
+    transportOptions: {
+      host: process.env.SMTP_HOST,
+      port: process.env.SMTP_PORT,
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASSWORD,
+      },
+    },
   }),
   sharp,
   plugins: [

@@ -2,6 +2,8 @@
 
 import config from '@payload-config'
 import { getPayload } from 'payload'
+import { sendAdminContactRequestMail } from '../mail/send-admin-contact-request-mail'
+import { sendContactRequestThankYouMail } from '../mail/send-contact-request-thank-you-mail'
 
 export type SubmitContactRequestActionParams = {
   name: string
@@ -14,7 +16,7 @@ export type SubmitContactRequestActionParams = {
 export const submitContactRequestAction = async (params: SubmitContactRequestActionParams) => {
   const payload = await getPayload({ config })
 
-  await payload.create({
+  const contactRequest = await payload.create({
     collection: 'contact-requests',
     data: {
       name: params.name,
@@ -24,4 +26,9 @@ export const submitContactRequestAction = async (params: SubmitContactRequestAct
       message: params.message,
     },
   })
+
+  await Promise.all([
+    sendAdminContactRequestMail({ payload, contactRequest }),
+    sendContactRequestThankYouMail({ payload, contactRequest }),
+  ])
 }
