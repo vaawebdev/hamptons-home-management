@@ -3,7 +3,20 @@ import { ContactUsSection } from '@/components/app/sections/contact-us/contact-u
 import { HeroSection } from '@/components/app/sections/hero/hero-section'
 import { ServicesSection } from '@/components/app/sections/services/services-section'
 import { WhyHamptonsSection } from '@/components/app/sections/why-hamptons/why-hamptons'
+import { Metadata } from 'next'
 import { FC } from 'react'
+
+export const metadata: Metadata = {
+  icons: {
+    other: [
+      {
+        rel: 'preload',
+        url: '/images/hero-bg.webp',
+        fetchPriority: 'high',
+      },
+    ],
+  },
+}
 
 const Page: FC = () => {
   return (
