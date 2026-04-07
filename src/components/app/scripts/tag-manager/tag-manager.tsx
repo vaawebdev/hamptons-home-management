@@ -1,4 +1,3 @@
-import '@/env'
 import Script from 'next/script'
 import { type FC } from 'react'
 
