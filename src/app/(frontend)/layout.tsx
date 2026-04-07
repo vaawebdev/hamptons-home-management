@@ -2,6 +2,7 @@ import { playfairDisplay } from '@/assets/fonts/playfair-display'
 import '@/assets/styles/bundle.css'
 import { Footer } from '@/components/app/footer/footer'
 import { Header } from '@/components/app/header/header'
+import { TagManager } from '@/components/app/scripts/tag-manager/tag-manager'
 import { cn } from '@/utils/cn'
 import { Metadata } from 'next'
 import { FC, PropsWithChildren } from 'react'
@@ -46,6 +47,9 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       data-scroll-behavior="smooth"
       className={cn('min-h-screen scroll-smooth', playfairDisplay.variable)}
     >
+      <head>
+        <TagManager />
+      </head>
       <body className="flex min-h-screen flex-col items-stretch scroll-smooth">
         <Header />
         <main className="flex grow flex-col items-stretch">{children}</main>

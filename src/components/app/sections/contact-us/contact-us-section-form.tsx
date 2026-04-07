@@ -20,6 +20,16 @@ export const ContactUsSectionForm: FC = () => {
           body: payload,
         })
 
+        if ('gtag' in window) {
+          gtag('event', 'contact_us', {
+            name: payload.get('name'),
+            email: payload.get('email'),
+            phone: payload.get('phone'),
+            address: payload.get('address'),
+            message: payload.get('message'),
+          })
+        }
+
         setIsSubmitted(true)
         form.reset()
       })
