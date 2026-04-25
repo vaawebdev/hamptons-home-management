@@ -50,6 +50,7 @@ export const PropertySlider: FC<PropertySliderProps> = ({ images, alt }) => {
               alt={`${alt} — image ${i + 1}`}
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
+              loading="lazy"
               className="object-cover"
             />
           </div>
