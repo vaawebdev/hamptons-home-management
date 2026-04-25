@@ -5,7 +5,7 @@ export const HeroSection: FC = () => {
   return (
     <section
       className="relative bg-neutral-900 bg-cover bg-center bg-no-repeat py-20"
-      style={{ backgroundImage: "url('/images/hero.webp')" }}
+      style={{ backgroundImage: "url('/images/hero.jpg')" }}
       aria-label="7 Upland Dr, Southampton, NY 11968"
     >
       <div className="absolute inset-0 z-20 size-full bg-black/50" />
