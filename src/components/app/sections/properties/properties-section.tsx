@@ -37,7 +37,7 @@ export const PropertiesSection: FC = async () => {
                     <h3 className="font-mono text-2xl font-semibold text-balance">
                       {property.address}
                     </h3>
-                    <dl className="grid grid-cols-2 gap-4 border-y border-gray-200 py-4 sm:grid-cols-4">
+                    <dl className="grid grid-cols-2 gap-4 border-y border-gray-200 py-4 md:grid-cols-4">
                       <div className="space-y-1 text-center">
                         <dt className="text-xs tracking-wide text-gray-500 uppercase">Bedrooms</dt>
                         <dd className="font-mono text-lg font-semibold text-black">

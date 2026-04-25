@@ -49,8 +49,8 @@ export const PropertySlider: FC<PropertySliderProps> = ({ images, alt }) => {
               src={src}
               alt={`${alt} — image ${i + 1}`}
               fill
-              sizes="(min-width: 768px) 50vw, 100vw"
-              loading="lazy"
+              sizes="(min-width: 1280px) 608px, (min-width: 768px) calc(50vw - 32px), calc(100vw - 32px)"
+              loading={i === 0 ? 'eager' : 'lazy'}
               className="object-cover"
             />
           </div>

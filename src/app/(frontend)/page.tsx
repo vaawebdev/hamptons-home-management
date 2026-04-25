@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     other: [
       {
         rel: 'preload',
-        url: '/images/hero-bg.webp',
+        url: '/images/hero.jpg',
         fetchPriority: 'high',
       },
     ],
