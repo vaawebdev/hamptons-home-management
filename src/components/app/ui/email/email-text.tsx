@@ -1,5 +1,5 @@
-import { Text } from '@react-email/components'
 import { FC, PropsWithChildren } from 'react'
+import { Text } from 'react-email'
 
 export type EmailTextProps = PropsWithChildren
 

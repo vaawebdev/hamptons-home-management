@@ -1,3 +1,4 @@
 export const PRIVACY_POLICY = 'PRIVACY_POLICY'
 export const TERMS_OF_SERVICE = 'TERMS_OF_SERVICE'
 export const COMPANY_INFO = 'COMPANY_INFO'
+export const PROPERTIES = 'PROPERTIES'

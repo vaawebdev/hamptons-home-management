@@ -1,3 +1,4 @@
+import { FC, PropsWithChildren } from 'react'
 import {
   Body,
   Container,
@@ -8,8 +9,7 @@ import {
   Preview,
   Section,
   Tailwind,
-} from '@react-email/components'
-import { FC, PropsWithChildren } from 'react'
+} from 'react-email'
 
 export type EmailLayoutProps = PropsWithChildren & {
   preview?: string

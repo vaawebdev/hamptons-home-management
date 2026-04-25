@@ -1,5 +1,5 @@
-import { Link, LinkProps } from '@react-email/components'
 import { FC } from 'react'
+import { Link, LinkProps } from 'react-email'
 
 export type EmailLinkProps = LinkProps
 

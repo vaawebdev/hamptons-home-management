@@ -11,6 +11,7 @@ import sharp from 'sharp'
 import { fileURLToPath } from 'url'
 import { ContactRequests } from './data/collections/contact-requests'
 import { Media } from './data/collections/media'
+import { Properties } from './data/collections/properties'
 import { CompanyInfo } from './data/globals/company-info'
 import { PrivacyPolicy } from './data/globals/privacy-policy'
 import { TermsOfService } from './data/globals/terms-of-service'
@@ -26,7 +27,7 @@ export default buildConfig({
     },
   },
   globals: [PrivacyPolicy, TermsOfService, CompanyInfo],
-  collections: [Users, Media, ContactRequests],
+  collections: [Users, Properties, Media, ContactRequests],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

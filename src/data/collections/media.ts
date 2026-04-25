@@ -1,6 +1,7 @@
 import type { CollectionConfig } from 'payload'
 import { anyone } from '../access/anyone'
 import { authenticated } from '../access/authenticated'
+import { populateAltHook } from '../hooks/populate-alt-hook'
 
 export const Media: CollectionConfig = {
   slug: 'media',
@@ -21,4 +22,7 @@ export const Media: CollectionConfig = {
     },
   ],
   upload: true,
+  hooks: {
+    beforeChange: [populateAltHook],
+  },
 }

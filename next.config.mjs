@@ -11,6 +11,11 @@ const nextConfig = {
   images: {
     dangerouslyAllowSVG: true,
     qualities: [25, 50, 75, 100],
+    localPatterns: [
+      {
+        pathname: '/**',
+      },
+    ],
   },
   typescript: {
     ignoreBuildErrors: true,

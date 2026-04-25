@@ -1,7 +1,7 @@
 import { AdminContactRequestMail } from '@/components/app/email/admin-contact-request-mail'
 import { ContactRequest } from '@/payload-types'
-import { render } from '@react-email/components'
 import { BasePayload } from 'payload'
+import { render } from 'react-email'
 
 export type SendAdminContactRequestMailParams = {
   payload: BasePayload

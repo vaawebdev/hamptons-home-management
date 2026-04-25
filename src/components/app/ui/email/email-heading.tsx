@@ -1,5 +1,5 @@
-import { Heading } from '@react-email/components'
 import { FC, PropsWithChildren } from 'react'
+import { Heading } from 'react-email'
 
 export type EmailHeadingProps = PropsWithChildren
 

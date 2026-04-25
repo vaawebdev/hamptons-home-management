@@ -1,5 +1,5 @@
-import { Text } from '@react-email/components'
 import { FC, PropsWithChildren, ReactNode } from 'react'
+import { Text } from 'react-email'
 
 export type EmailFieldProps = PropsWithChildren & {
   label?: ReactNode

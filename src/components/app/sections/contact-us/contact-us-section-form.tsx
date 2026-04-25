@@ -21,7 +21,7 @@ export const ContactUsSectionForm: FC = () => {
         })
 
         if ('gtag' in window) {
-          gtag('event', 'contact_us', {
+          window.gtag('event', 'contact_us', {
             name: payload.get('name'),
             email: payload.get('email'),
             phone: payload.get('phone'),

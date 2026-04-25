@@ -1,9 +1,9 @@
-import { AwardIcon, ClockIcon, HeartIcon, TrendingUpIcon } from 'lucide-react'
+import { AwardIcon, ConciergeBellIcon, HammerIcon, MapPinIcon } from 'lucide-react'
 
 export const REASONS = [
   {
     id: 'local-experience',
-    icon: ClockIcon,
+    icon: MapPinIcon,
     title: '20+ Years Local Experience',
     description:
       'Since 2004, the Hamptons have been our home. We know every neighborhood, every contractor, and every detail that matters.',
@@ -17,14 +17,14 @@ export const REASONS = [
   },
   {
     id: 'construction-expertise',
-    icon: HeartIcon,
+    icon: HammerIcon,
     title: 'Construction Expertise',
     description:
       'Hands-on experience building single-family homes gives us deep understanding of how properties should be maintained.',
   },
   {
     id: 'concierge-mindset',
-    icon: TrendingUpIcon,
+    icon: ConciergeBellIcon,
     title: 'Concierge Mindset',
     description:
       'We manage homes as if they were our own—with operational precision, transparency, and absolute respect.',

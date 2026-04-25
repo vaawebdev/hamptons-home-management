@@ -1,7 +1,7 @@
 import { ContactRequestThankYouMail } from '@/components/app/email/contact-request-thank-you-mail'
 import { ContactRequest } from '@/payload-types'
-import { render } from '@react-email/components'
 import { BasePayload } from 'payload'
+import { render } from 'react-email'
 
 export type SendContactRequestThankYouMailParams = {
   payload: BasePayload
