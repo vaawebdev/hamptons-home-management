@@ -1,19 +1,13 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
 
 export const HeroSection: FC = () => {
   return (
-    <section className="relative bg-neutral-900 py-20">
-      <Image
-        src="/images/hero.jpg"
-        alt="7 Upland Dr, Southampton, NY 11968"
-        fill
-        priority
-        fetchPriority="high"
-        sizes="100vw"
-        className="absolute inset-0 z-10 object-cover"
-      />
+    <section
+      className="relative bg-neutral-900 bg-cover bg-center bg-no-repeat py-20"
+      style={{ backgroundImage: "url('/images/hero.webp')" }}
+      aria-label="7 Upland Dr, Southampton, NY 11968"
+    >
       <div className="absolute inset-0 z-20 size-full bg-black/50" />
       <div className="relative z-30 container space-y-8 py-12">
         <h1 className="mx-auto max-w-4xl text-center font-mono text-4xl font-semibold text-balance text-white sm:text-5xl md:text-6xl lg:text-7xl">
