@@ -9,9 +9,9 @@ export const HeroSection: FC = () => {
         src="/images/hero.jpg"
         alt="7 Upland Dr, Southampton, NY 11968"
         fill
-        preload
-        sizes="(min-width: 1024px) 50vw, 100vw"
-        loading="eager"
+        priority
+        fetchPriority="high"
+        sizes="100vw"
         className="absolute inset-0 z-10 object-cover"
       />
       <div className="absolute inset-0 z-20 size-full bg-black/50" />
