@@ -163,7 +163,7 @@ export interface User {
  */
 export interface Property {
   id: string;
-  address: string;
+  name: string;
   images?: (string | Media)[] | null;
   description: string;
   bedrooms: string;
@@ -319,7 +319,7 @@ export interface UsersSelect<T extends boolean = true> {
  * via the `definition` "properties_select".
  */
 export interface PropertiesSelect<T extends boolean = true> {
-  address?: T;
+  name?: T;
   images?: T;
   description?: T;
   bedrooms?: T;

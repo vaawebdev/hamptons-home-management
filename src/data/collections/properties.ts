@@ -12,12 +12,12 @@ export const Properties: CollectionConfig = {
   },
   admin: {
     group: 'Content',
-    useAsTitle: 'address',
-    defaultColumns: ['address', 'images', 'description'],
+    useAsTitle: 'name',
+    defaultColumns: ['name', 'images', 'description'],
   },
   fields: [
     {
-      name: 'address',
+      name: 'name',
       type: 'text',
       required: true,
     },
