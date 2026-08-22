@@ -26,9 +26,11 @@ export const LegalSection: FC<LegalSectionProps> = ({ title, updatedAt, content 
         {updatedAt ? (
           <p className="font-serif text-sm text-gray-700 italic">
             Last Updated:{' '}
-            {Intl.DateTimeFormat('en', { month: 'long', day: 'numeric', year: 'numeric' }).format(
-              parseISO(updatedAt),
-            )}
+            {new Intl.DateTimeFormat('en', {
+              month: 'long',
+              day: 'numeric',
+              year: 'numeric',
+            }).format(parseISO(updatedAt))}
           </p>
         ) : null}
       </div>

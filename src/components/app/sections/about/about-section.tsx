@@ -38,8 +38,8 @@ export const AboutSection: FC = () => {
                 <h3 className="font-mono text-2xl font-semibold text-balance text-black">
                   {block.title}
                 </h3>
-                {block.paragraphs.map((paragraph, idx) => (
-                  <p key={idx} className="text-lg leading-relaxed text-pretty text-gray-700">
+                {block.paragraphs.map((paragraph) => (
+                  <p key={paragraph} className="text-lg leading-relaxed text-pretty text-gray-700">
                     {paragraph}
                   </p>
                 ))}
