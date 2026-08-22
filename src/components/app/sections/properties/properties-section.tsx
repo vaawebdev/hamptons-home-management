@@ -28,9 +28,7 @@ export const PropertiesSection: FC = async () => {
                 key={property.id}
                 className="flex flex-col overflow-hidden border border-gray-200 bg-white"
               >
-                {imageUrls.length > 0 && (
-                  <PropertySlider images={imageUrls} alt={property.name} />
-                )}
+                {imageUrls.length > 0 && <PropertySlider images={imageUrls} alt={property.name} />}
                 <div className="flex grow flex-col gap-8 p-6 sm:p-8">
                   <div className="space-y-6">
                     <h3 className="font-mono text-2xl font-semibold text-balance">

@@ -29,7 +29,7 @@ export const PropertySlider: FC<PropertySliderProps> = ({ images, alt }) => {
       el.removeEventListener('scroll', update)
       ro.disconnect()
     }
-  }, [images.length])
+  }, [])
 
   const scroll = (dir: 1 | -1) => {
     const el = trackRef.current
@@ -41,7 +41,7 @@ export const PropertySlider: FC<PropertySliderProps> = ({ images, alt }) => {
     <div className="group relative aspect-4/3 overflow-hidden">
       <div
         ref={trackRef}
-        className="flex h-full snap-x snap-mandatory overflow-x-auto scroll-smooth bg-gray-200 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="flex h-full snap-x snap-mandatory [scrollbar-width:none] overflow-x-auto scroll-smooth bg-gray-200 [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
       >
         {images.map((src, i) => (
           <div key={src} className="relative h-full w-full shrink-0 snap-start">

@@ -45,7 +45,7 @@ export const ContactRequestThankYouMail: FC<ContactRequestThankYouMailProps> & {
             .trim()
             .split('\n')
             .map((line, idx, lines) => (
-              <Fragment key={idx}>
+              <Fragment key={line}>
                 {line}
                 {idx < lines.length - 1 ? <br /> : null}
               </Fragment>
