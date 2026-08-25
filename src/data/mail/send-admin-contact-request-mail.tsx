@@ -11,6 +11,7 @@ export type SendAdminContactRequestMailParams = {
 export const sendAdminContactRequestMail = async (params: SendAdminContactRequestMailParams) => {
   await params.payload.sendEmail({
     to: process.env.MAIL_ADMIN_ADDRESS,
+    replyTo: params.contactRequest.email,
     subject: `[Contact] ${params.contactRequest.name} - ${params.contactRequest.email}`,
     html: await render(<AdminContactRequestMail contactRequest={params.contactRequest} />),
   })
