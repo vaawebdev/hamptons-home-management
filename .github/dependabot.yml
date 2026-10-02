@@ -16,10 +16,8 @@ updates:
     labels:
       - dependencies
     ignore:
-      # TypeScript 7 is not supported by Next.js yet
       - dependency-name: typescript
         versions: ['>=7']
-      # Node.js types must follow the runtime, and newer Node majors are not available on Vercel yet
       - dependency-name: '@types/node'
         update-types: ['version-update:semver-major']
     groups:
