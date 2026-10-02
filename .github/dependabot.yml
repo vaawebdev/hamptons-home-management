@@ -1,0 +1,67 @@
+version: 2
+
+updates:
+  - package-ecosystem: npm
+    directory: /
+    target-branch: main
+    schedule:
+      interval: weekly
+      day: monday
+      time: '06:00'
+      timezone: America/New_York
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: chore(deps)
+      prefix-development: chore(deps-dev)
+    labels:
+      - dependencies
+    ignore:
+      - dependency-name: typescript
+        versions: ['>=7']
+      - dependency-name: '@types/node'
+        update-types: ['version-update:semver-major']
+    groups:
+      payload:
+        patterns:
+          - payload
+          - '@payloadcms/*'
+      next-react:
+        patterns:
+          - next
+          - react
+          - react-dom
+          - '@types/react'
+          - '@types/react-dom'
+      tailwind:
+        patterns:
+          - tailwindcss
+          - '@tailwindcss/*'
+          - postcss
+      react-email:
+        patterns:
+          - react-email
+          - '@react-email/*'
+      oxc:
+        patterns:
+          - oxlint
+          - oxfmt
+      minor-and-patch:
+        update-types:
+          - minor
+          - patch
+
+  - package-ecosystem: github-actions
+    directories:
+      - /
+      - /.github/actions/*
+    target-branch: main
+    schedule:
+      interval: monthly
+    commit-message:
+      prefix: ci
+    labels:
+      - dependencies
+    groups:
+      actions:
+        patterns:
+          - '*'
