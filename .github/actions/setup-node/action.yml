@@ -13,17 +13,17 @@ runs:
   using: composite
   steps:
     - name: Install pnpm
-      uses: pnpm/action-setup@v4
+      uses: pnpm/action-setup@v6
       with:
         version: ${{ inputs.pnpm-version }}
 
     - name: Setup Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v7
       with:
         node-version: ${{ inputs.node-version }}
 
     - name: Restore cached node_modules
-      uses: actions/cache/restore@v4
+      uses: actions/cache/restore@v6
       id: restore-cache
       with:
         path: node_modules
@@ -36,7 +36,7 @@ runs:
 
     - name: Cache node_modules
       if: steps.restore-cache.outputs.cache-hit != 'true'
-      uses: actions/cache/save@v4
+      uses: actions/cache/save@v6
       with:
         path: node_modules
         key: node-modules-${{ runner.os }}-${{ inputs.node-version }}-${{ hashFiles('pnpm-lock.yaml') }}
