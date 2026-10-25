@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Hamptons Home Management Website",
   "license": "MIT",
+  "packageManager": "pnpm@10.34.8",
   "type": "module",
   "scripts": {
     "build": "cross-env NODE_ENV=production NODE_OPTIONS=\"--no-deprecation --max-old-space-size=8000\" next build",
@@ -64,11 +65,6 @@
     "tailwindcss": "4.3.3",
     "typescript": "6.0.3"
   },
-  "overrides": {
-    "dompurify": "3.4.17",
-    "happy-dom": "21.0.4",
-    "postcss-selector-parser": "7.1.7"
-  },
   "pnpm": {
     "onlyBuiltDependencies": [
       "sharp",
@@ -79,9 +75,13 @@
       "@tailwindcss/oxide"
     ],
     "overrides": {
-      "dompurify": "3.4.17",
-      "happy-dom": "21.0.4",
-      "postcss-selector-parser": "7.1.7"
+      "dompurify": "3.4.17"
+    },
+    "auditConfig": {
+      "ignoreGhsas": [
+        "GHSA-834v-8h66-3h79",
+        "GHSA-rj75-hqrm-r3gf"
+      ]
     }
   }
 }

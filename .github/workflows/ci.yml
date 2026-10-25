@@ -10,7 +10,6 @@ concurrency:
 
 env:
   NODE_VERSION: '24.22.1'
-  PNPM_VERSION: '10'
 
 jobs:
   prepare:
@@ -20,7 +19,6 @@ jobs:
       - uses: ./.github/actions/setup-node
         with:
           node-version: ${{ env.NODE_VERSION }}
-          pnpm-version: ${{ env.PNPM_VERSION }}
 
   lint:
     needs: prepare
@@ -30,7 +28,6 @@ jobs:
       - uses: ./.github/actions/setup-node
         with:
           node-version: ${{ env.NODE_VERSION }}
-          pnpm-version: ${{ env.PNPM_VERSION }}
       - run: pnpm lint
 
   format:
@@ -41,7 +38,6 @@ jobs:
       - uses: ./.github/actions/setup-node
         with:
           node-version: ${{ env.NODE_VERSION }}
-          pnpm-version: ${{ env.PNPM_VERSION }}
       - run: pnpm format:check
 
   type-check:
@@ -52,5 +48,4 @@ jobs:
       - uses: ./.github/actions/setup-node
         with:
           node-version: ${{ env.NODE_VERSION }}
-          pnpm-version: ${{ env.PNPM_VERSION }}
       - run: pnpm type-check
