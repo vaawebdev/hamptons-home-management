@@ -3,6 +3,7 @@ import '@/assets/styles/bundle.css'
 import { Footer } from '@/components/app/footer/footer'
 import { Header } from '@/components/app/header/header'
 import { TagManager } from '@/components/app/scripts/tag-manager/tag-manager'
+import { SkipToContent } from '@/components/app/skip-to-content/skip-to-content'
 import { cn } from '@/utils/cn'
 import { Metadata } from 'next'
 import { FC, PropsWithChildren } from 'react'
@@ -51,8 +52,11 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         <TagManager />
       </head>
       <body className="flex min-h-screen flex-col items-stretch scroll-smooth">
+        <SkipToContent />
         <Header />
-        <main className="flex grow flex-col items-stretch">{children}</main>
+        <main id="main" className="flex grow flex-col items-stretch">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
